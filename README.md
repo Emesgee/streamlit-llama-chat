@@ -6,19 +6,19 @@ Dette projekt leverer en brugervenlig Streamlit-baseret webgrænseflade, hvor br
 
 ### Streamlit Web UI
 
-Simpel og intuitiv brugergrænseflade.
+- Simpel og intuitiv brugergrænseflade.
 
-Mulighed for at stille spørgsmål på naturligt dansk.
+- Mulighed for at stille spørgsmål på naturligt dansk.
 
 ### LlamaIndex VectorStoreIndex
 
-Indlæser dokumenter automatisk fra en angivet mappe (SimpleDirectoryReader fra DATA_DIR).
+- Indlæser dokumenter automatisk fra en angivet mappe (SimpleDirectoryReader fra DATA_DIR).
 
-Opretter og gemmer indeks i mappen ./storage.
+- Opretter og gemmer indeks i mappen ./storage.
 
-Genbruger eksisterende indeks, hvis de allerede er oprettet.
+- Genbruger eksisterende indeks, hvis de allerede er oprettet.
 
-Udfører avancerede semantiske søgninger for at finde de mest relevante svar.
+- Udfører avancerede semantiske søgninger for at finde de mest relevante svar.
 
 ### OpenAI GPT-4 (Oversættelseslag)
 
