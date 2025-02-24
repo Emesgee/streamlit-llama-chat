@@ -52,8 +52,8 @@ def translate_to_danish(text):
     return response.choices[0].message.content.strip()
 
 # Streamlit UI
-st.title("Koncern-IT")
-st.markdown("### Hejsa! Hvordan kan jeg hjælpe dig? ###")
+st.title("Agent X")
+st.markdown("### Hvordan kan jeg hjælpe dig? ###")
 
 # Initialize index
 index = get_or_create_index()
