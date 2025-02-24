@@ -36,3 +36,52 @@ Dette projekt leverer en brugervenlig Streamlit-baseret webgrænseflade, hvor br
 
 Denne kombination sikrer høj kvalitet, hurtige responstider og en naturlig dansk interaktion med data.
 
+# Arkitektur af appen:
++--------------------------------------------------------------------------------+
+|                               Streamlit Web UI                                 |
+|            (Brugergrænseflade til at stille spørgsmål på dansk)                |
++-----------------------------+--------------------------------------------------+
+                              |
+                              |
+                              v
++-----------------------------+--------------------------------------------------+
+|          LlamaIndex VectorStoreIndex                                           |
+| - Loader dokumenter (SimpleDirectoryReader fra DATA_DIR)                       |
+| - Opretter og gemmer indeks (i ./storage)                                      |
+| - Loader eksisterende indeks, hvis allerede til stede                          |
+| - Udfører semantiske forespørgsler mod indekset                                |
++-----------------------------+--------------------------------------------------+
+                              |
+                              |
+                              v
++-----------------------------+--------------------------------------------------+
+|           OpenAI GPT-4 (Translation Layer)                                     |
+|  - Modtager svar fra LlamaIndex (på engelsk)                                   |
+|  - Oversætter svaret til dansk                                                 |
++--------------------------------------------------------------------------------+
+
+
+## Komponenternes roller: 
+### Streamlit UI:
+
+- Brugerinput og visning af output.
+- Håndterer interaktion, fejl og visuelle elementer.
+
+## LlamaIndex:
+
+- Indlæser dokumenter fra disk og opretter en semantisk indeks.
+- Udfører forespørgsler mod dokumentindholdet.
+
+## OpenAI GPT-4 API:
+
+- Oversætter svarene fra engelsk til dansk, så brugeren modtager naturlige svar.
+
+## Flow:
+1. Bruger skriver forespørgsel i Streamlit.
+2. Streamlit sender forespørgsel til LlamaIndex.
+3. LlamaIndex returnerer svar (på engelsk).
+4. OpenAI GPT-4 oversætter svaret til dansk.
+5. Streamlit viser det danske svar til brugeren.
+
+
+
