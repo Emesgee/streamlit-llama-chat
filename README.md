@@ -37,28 +37,8 @@ Dette projekt leverer en brugervenlig Streamlit-baseret webgrænseflade, hvor br
 Denne kombination sikrer høj kvalitet, hurtige responstider og en naturlig dansk interaktion med data.
 
 # Arkitektur af appen:
-+--------------------------------------------------------------------------------+
-|                               Streamlit Web UI                                 |
-|            (Brugergrænseflade til at stille spørgsmål på dansk)                |
-+-----------------------------+--------------------------------------------------+
-                              |
-                              |
-                              v
-+-----------------------------+--------------------------------------------------+
-|          LlamaIndex VectorStoreIndex                                           |
-| - Loader dokumenter (SimpleDirectoryReader fra DATA_DIR)                       |
-| - Opretter og gemmer indeks (i ./storage)                                      |
-| - Loader eksisterende indeks, hvis allerede til stede                          |
-| - Udfører semantiske forespørgsler mod indekset                                |
-+-----------------------------+--------------------------------------------------+
-                              |
-                              |
-                              v
-+-----------------------------+--------------------------------------------------+
-|           OpenAI GPT-4 (Translation Layer)                                     |
-|  - Modtager svar fra LlamaIndex (på engelsk)                                   |
-|  - Oversætter svaret til dansk                                                 |
-+--------------------------------------------------------------------------------+
+![image](https://github.com/user-attachments/assets/e1b1a4fd-fc0f-478e-ad74-b8066e7b50a0)
+
 
 
 ## Komponenternes roller: 
