@@ -3,10 +3,12 @@
 Dette projekt leverer en brugervenlig Streamlit-baseret webgrænseflade, hvor brugere kan stille spørgsmål på dansk og modtage præcise, semantiske svar på dansk. Systemet kombinerer LlamaIndex og OpenAI's GPT-4 for effektiv dokumenthåndtering og oversættelse.
 
 
-## NB: Husk at oprette to mapper:
+## NB: Husk at oprette to mapper og opret en .env fil med api-nøgle:
 
 - ./data: Placér dine PDF-filer her.
 - ./storage: Vector-data og indeks gemmes automatisk her.
+- .env: OPENAI_API_KEY="din api nøgle her."
+
 
 ## Funktionalitet
 
